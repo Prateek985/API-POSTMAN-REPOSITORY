@@ -1,0 +1,20 @@
+[
+  {
+	  "id": 101,
+    "name": "Rohan",
+    "age": 25,
+    "status": "inactive"
+  },
+  {
+	  "id": 102,
+    "name": "Jyoti Patel",
+    "age": 30,
+    "status": "active"
+  },
+  {
+	  "id": 103,
+    "name": "Lokesh harjot",
+    "age": 45,
+    "status": "active"
+  }
+]

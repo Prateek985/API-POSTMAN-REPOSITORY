@@ -1,0 +1,37 @@
+{
+	"info": {
+		"_postman_id": "e2a33fcd-babf-4188-b655-6948f8921f98",
+		"name": "FileUpload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17229936"
+	},
+	"item": [
+		{
+			"name": "fileUpload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/hp/OneDrive/Desktop/2023-2024SeleniumBatch/ApiData/simple.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{fileUrl}}/post",
+					"host": [
+						"{{fileUrl}}"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

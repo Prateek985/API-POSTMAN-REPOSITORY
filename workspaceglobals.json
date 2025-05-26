@@ -1,0 +1,15 @@
+{
+	"id": "0a85f974-9c62-4e14-808e-c3a154895a16",
+	"values": [
+		{
+			"key": "fileUrl",
+			"value": "https://postman-echo.com",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2025-05-22T07:01:03.529Z",
+	"_postman_exported_using": "Postman/11.46.4"
+}

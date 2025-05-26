@@ -1,0 +1,15 @@
+{
+	"id": "174e634f-8836-4142-b364-cb032bb083de",
+	"name": "SampleEnv",
+	"values": [
+		{
+			"key": "baseURL",
+			"value": "httpbin.org",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2025-05-24T10:22:02.633Z",
+	"_postman_exported_using": "Postman/11.46.6"
+}

@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "0d6238ef-7808-4c63-9051-75564e39abe3",
+		"name": "DataDrivenTestAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17229936"
+	},
+	"item": [
+		{
+			"name": "2- CreateUser",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"User data is correct\", function(){\r",
+							"\r",
+							"    const response = pm.response.json();//actual data\r",
+							"   \r",
+							"\r",
+							"    pm.expect(response.name).to.eql(pm.iterationData.get(\"name\"));\r",
+							"    pm.expect(response.gender).to.eql(pm.iterationData.get(\"gender\"));\r",
+							"    pm.expect(response.status).to.eql(pm.iterationData.get(\"status\"));\r",
+							"   \r",
+							"\r",
+							"    //check the mailid how we can pass the varible of body to script\r",
+							"    const rawBody = pm.request.body.raw;   //JSON String\r",
+							"    //JSON to JS object\r",
+							"    const requestbody = JSON.parse(rawBody);\r",
+							"    const email = requestbody.email;\r",
+							"    console.log(email);\r",
+							"    pm.expect(response.email).to.eql(email);\r",
+							"    // need to run the test with JSON file.\r",
+							"\r",
+							"\r",
+							"\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 692d8437db3bd811b75c67ca938518260ea69d791503cb3ea399e388cad55fc9",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{name}}\",\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"gender\": \"{{gender}}\",\r\n    \"status\": \"{{status}}\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

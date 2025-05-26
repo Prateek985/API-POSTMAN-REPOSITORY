@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "6e488259-cd7b-49d0-963a-ba73878c955f",
+		"name": "Customer_Collections",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17229936"
+	},
+	"item": [
+		{
+			"name": "POST_Create_User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"David Biber\",\r\n    \"year\": 1968,\r\n    \"color\": \"#98B2D4\",\r\n    \"pantone_value\": \"20-4020\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_Url}}/api/users",
+					"host": [
+						"{{base_Url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

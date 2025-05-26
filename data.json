@@ -1,0 +1,16 @@
+[
+   {
+     "name": "prateek",
+	 "city": "Raipur"
+   },
+   {
+      "name": "Prateek",
+	  "city": "Raipur",
+	  "designation": "SDET"
+   },
+   {
+	 "name": "prateek",
+	 "city": "Raipur",
+	 "language": ["Java, JavaScript"]
+   }   
+]
