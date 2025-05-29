@@ -18,7 +18,6 @@ pipeline {
         }
         stage('Run api test cases') {
             steps {
-                bat 'mkdir results'
                 bat """
                     newman run "Booking_APIsWorkFlowCollection.json" ^
                         -e "Booking_API_Enviroment.json" ^
